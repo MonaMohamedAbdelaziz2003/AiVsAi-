@@ -1,0 +1,35 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff8dc;
+    /* لون الخلفية الأصفر الفاتح */
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6600;
+    /* لون النص البرتقالي */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #cc5500;
+    /* لون النص البرتقالي الداكن */
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.login-btn,
+.signup-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 0 10px;
+}

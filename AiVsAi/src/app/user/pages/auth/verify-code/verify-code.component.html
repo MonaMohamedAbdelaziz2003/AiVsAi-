@@ -1,0 +1,21 @@
+<div style="display: flex; justify-content: center; margin-top: 100px;">
+    <div class="verify-container">
+        <h2>Email Verification</h2>
+
+        <form (ngSubmit)="verifyCode()">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required />
+
+            <label for="code">Verification Code</label>
+            <input type="text" id="code" [(ngModel)]="code" name="code" placeholder="Enter verification code" required />
+
+            <button type="submit">Verify</button>
+        </form>
+        <!-- isDisabled -->
+        <button type="button" (click)="resend()" [disabled]="isDisabled">
+          Resend verification code
+        </button> @if (isDisabled) {
+        <p>Please wait {{ countdown }} seconds...</p>
+        }
+    </div>
+</div>

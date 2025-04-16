@@ -1,0 +1,37 @@
+<div class="image-text-input-container" style="  background-image: url('assets/bg1.avif');
+    background-size: 82% 85%;
+    background-position: center;
+    background-repeat: no-repeat;">
+    <div class="text-overlay">
+        <h2>Detect AI-generated Images</h2>
+        <p>Upload an image to see if it was made by a machine</p>
+        <div style=" display:flex;gap: 20px;">
+            <div class="upload-container">
+                <input type="file" id="imageUpload" (change)="onFileSelected($event)" accept="image/*" hidden>
+                <label for="imageUpload" class="upload-label">
+                <i class="fas fa-upload"></i> {{"Upload Image..." }}
+            </label>
+                <button class="upload-button" (click)="uploadFile()" [disabled]="!selectedFile">Detect </button>
+            </div>
+            <p>{{ prediction }}</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="image-text-section">
+    <div class="image-container">
+        <img src="assets/bg2.avif" alt="Example Image" class="image">
+    </div>
+    <div class="text-container" style="text-align: center;">
+        <h2>Generate Image from Text</h2>
+        <p>Write a description and get an image in seconds</p>
+        <div class="search-input-container">
+            <i class="search-icon fas fa-keyboard"></i>
+            <input type="text" placeholder="Enter a description..." class="search-input">
+            <button class="search-button">Generate</button>
+        </div>
+        <img src="assets/bg2.avif" alt="Example Image" style="width:50%; margin:20px">
+
+    </div>
+</div>

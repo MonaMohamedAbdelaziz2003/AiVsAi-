@@ -1,0 +1,29 @@
+<div style="display: flex; justify-content: center; margin-top: 100px;">
+    <div class="create-account-container">
+        <h1>Create an Account</h1>
+        <form (ngSubmit)="registerUser()">
+            <label for="name">Name</label>
+            <input type="text" id="name" [(ngModel)]="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required />
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+
+            <div class="terms">
+                <input type="checkbox" id="terms" [(ngModel)]="termsAccepted" name="termsAccepted" required />
+                <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+            </div>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <div class="signup-link">
+            already have an account? <a routerLink="/login">Login</a>
+        </div>
+    </div>
+</div>
